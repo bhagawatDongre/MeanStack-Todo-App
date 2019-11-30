@@ -1,0 +1,40 @@
+
+<div class='todoList'>
+  <div class="tablecontainer">
+      <button class = 'primary todo' [routerLink]="['/todo-create']">Add Todo</button>
+      <h3 class="tabletitle">{{tableTitle}}</h3>
+      <table class="table">
+          <thead>
+              <tr>
+                  <th *ngFor="let column of tableColHeaderName">
+                      {{column}}
+                  </th>
+                  <th>Edit</th>
+                  <th>Delete</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let data of todo; let idx = index;" (click)="todoSelected(data);" [class.isOverDue] = "data['isOverDue']">
+                      <td *ngFor="let column1 of tableCol">
+                          {{data[column1]}}
+                      </td>
+                      <td>
+                          <button class = 'danger' (click)="deleteTodo(data._id)">Delete</button>
+                      </td>
+                      <td>
+                          <button  class = 'primary' (click)="editTodo(data._id)">Edit</button>
+                      </td>
+                  </tr>
+          </tbody>
+      </table>
+  </div>
+
+    <div class='todoInfo'>
+      <h3>Info</h3>
+      <ul>
+        <li>To do list is sorted by Due Date and Priority (to do's are sorted by due date first then task with same due date will be sorted with priority)</li>
+        <li>Highlighted reddish color to do's are Over Due</li>
+        <li>Default todo priority is low</li>
+      <ul>
+    <div>
+</div>

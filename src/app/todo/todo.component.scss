@@ -1,0 +1,25 @@
+.todoList{
+  .tablecontainer{
+    position: relative;
+    width: 70%;
+    display: inline-block;
+    vertical-align: top;
+
+    button.todo{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+    }
+    .isOverDue{
+      background-color: #ff634782;
+    }
+  }
+
+  .todoInfo {
+    width: 25%;
+    display: inline-block;
+    margin-top: 26px;
+    padding: 15px;
+  }
+
+}

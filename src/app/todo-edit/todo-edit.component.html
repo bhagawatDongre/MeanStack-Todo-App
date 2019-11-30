@@ -1,0 +1,29 @@
+<div class = 'todo-edit'>
+
+  <h3> Edit Todo </h3>
+
+  <form [formGroup]="todoForm" (ngSubmit) = "onClickSubmit(todoForm.value)" >
+      <label for="title">Title</label>
+    <input type = "text" formControlName="title" name = "title" placeholder = "title">
+    <br/>
+
+      <label for="description">Text Area</label>
+    <input type = "textarea" formControlName="description" name = "description" placeholder = "description">
+    <br/>
+
+    <label for="due_date">Due Date</label>
+    <input type = "date" formControlName="due_date" name = "due_date" placeholder = "due_date">
+    <br/>
+
+    <label for="priority">Priority</label>
+    <select name = "priority" formControlName="priority">
+      <option selected disabled hidden style='display: none' value=''></option>
+      <option value="0">Low</option>
+      <option value="1">Medium</option>
+      <option value="2">High</option>
+    </select>
+
+    <br/>
+    <input class = 'primary' type = "submit" value = "Submit">
+  </form>
+</div>

@@ -1,0 +1,11 @@
+.todo-create{
+  width: 50%;
+  min-width: 250px;
+  background-color: #f2f2f2;
+  overflow: auto;
+  padding: 10px 10px;
+
+  input[type=submit]{
+    float: right;
+  }
+}
