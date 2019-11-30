@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Steps to run this project
+1] Download and navigate to project directory 
+2] delete node modules and pakage.lock.json for fresh npm install
+3] run command npm install then npm start 
+4] App front end will be configured now you need to setup backend 
+5] set up mongodb https://hevodata.com/blog/install-mongodb-on-ubuntu/
+5] test if mangodb is successfully installed by running folllowing command 
+    curl -i -H "Accept: application/json" localhost:3000/api
+
+
+
